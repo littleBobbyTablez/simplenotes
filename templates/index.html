@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://localhost:8088/output.css">
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+    <link href="./static/output.css" rel="stylesheet">
+    <title>Todos</title>
+  </head>
+  <body class="bg-gray-500 flex-col justify-evenly p-2">
+    <h1 id="greeting" class="font-bold text-3xl bg-gradient-to-r from-blue-500 via-violet-400 to-pink-400 inline-block text-transparent bg-clip-text">Simple_Notes</h1>
+    <p class="p-2">
+    <form class="w-full max-w-xs" hx-post="/" hx-target="#Note" hx-swap="beforebegin" hx-push-url="true" >
+        <div class="p-1">
+            <input name="Title" class="p-1 rounded" placeholder="titel" type="text"/>
+        </div>
+        <div class="p-1">
+            <input name="Content" class="p-1 rounded" placeholder="content" type="text"/>
+        </div>
+        <div class="p-1">
+            <button class="text-white rounded py-2 px-3 bg-blue-500" type="submit">submit</button>
+        </div>
+    </form>
+    </p>
+    <p class="p-2">
+        <div id="Note"/>
+    </p>
+  </body>
+</html>
+
+
