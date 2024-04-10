@@ -1,6 +1,11 @@
-<div id="Note" class="p-1">
+<li class="p-1">
 <div class="rounded-md bg-white">
-    <h2 class="flex justify-between font-bold bg-white p-2 rounded-md" _="on click toggle .hidden on the next <div/>">{{.Title}} <button _="on click remove #Note">x</button></h2>
-    <div class="p-2 bg-gray-200 rounded-b-md hidden">{{.Content}}<div/>
+    <div class="flex justify-between p-2 break-normal">
+        <h2 class="font-bold break-normal w-full bg-white rounded-md" _="on click toggle .hidden on the next <div/>">
+            {{.Title}}
+        </h2>
+        <button class="font-bold" _="on click remove closest <li/>">x</button>
+    </div>
+    <div it="content" class="break-normal p-2 bg-gray-200 rounded-b-md hidden">{{.Content}}<div/>
 </div>
-</div>
+</li>

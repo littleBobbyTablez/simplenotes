@@ -11,7 +11,7 @@
   <body class="bg-gray-500 flex-col justify-evenly p-2">
     <h1 id="greeting" class="font-bold text-3xl bg-gradient-to-r from-blue-500 via-violet-400 to-pink-400 inline-block text-transparent bg-clip-text">Simple_Notes</h1>
     <p class="p-2">
-    <form class="w-full" hx-post="/" hx-target="#Note" hx-swap="beforebegin" hx-push-url="true" hx-on::after-request="this.reset()">
+    <form class="w-full" hx-post="/" hx-target="#Notes" hx-swap="afterbegin" hx-push-url="true" hx-on::after-request="this.reset()">
         <div class="rounded-md bg-white">
             <input id="in_title" name="Title" class="p-1 rounded w-full" placeholder="titel" type="text"/>
             <p>
@@ -23,9 +23,8 @@
         </div>
     </form>
     </p>
-    <p class="p-2">
-        <div id="Note"/>
-    </p>
+    <ul id="Notes" class="p-2">
+    </ul>
   </body>
 </html>
 
